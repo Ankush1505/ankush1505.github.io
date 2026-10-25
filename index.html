@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ankush</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #f2f3f5;
+  --text: #17181b;
+  --muted: #5d636d;
+  --line: #cfd3da;
+  --row: #e8eaee;
+  --name-a: #6b7280;
+  --name-b: #1d2026;
+  --focus: #1d2026;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #070708;
+    --text: #e9edf2;
+    --muted: #8b919b;
+    --line: #2b2d32;
+    --row: #101114;
+    --name-a: #f3f6fa;
+    --name-b: #8d949f;
+    --focus: #e9edf2;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #070708;
+  --text: #e9edf2;
+  --muted: #8b919b;
+  --line: #2b2d32;
+  --row: #101114;
+  --name-a: #f3f6fa;
+  --name-b: #8d949f;
+  --focus: #e9edf2;
+}
+html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: inherit; }
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 22px;
+}
+main { width: 100%; max-width: 400px; text-align: center; }
+h1 {
+  margin: 0;
+  font-family: "Allura", "Snell Roundhand", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-size: clamp(88px, 28vw, 128px);
+  line-height: 1.05;
+  padding: 0 0.12em 0.1em;
+  background: linear-gradient(180deg, var(--name-a) 20%, var(--name-b) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.title { margin: 6px 0 0; font-size: 15px; font-weight: 300; letter-spacing: 0.14em; color: var(--muted); }
+.links { list-style: none; margin: 44px 0 0; padding: 0; display: grid; gap: 10px; }
+.links a {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  padding: 16px 18px;
+  background: var(--row);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color 0.15s ease;
+}
+.links a span { font-weight: 300; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; text-align: right; }
+.links a:hover { border-color: var(--muted); }
+.links a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.quote { margin: 40px 0 0; font-size: 14px; font-weight: 300; letter-spacing: 0.08em; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  h1 { animation: rise 0.9s ease-out both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>Ankush</h1>
+  <p class="title">Ambition, engineered.</p>
+  <ul class="links">
+    <li><a href="https://github.com/Ankush1505" target="_blank" rel="noopener">GitHub <span>Ankush1505</span></a></li>
+    <li><a href="https://www.linkedin.com/search/results/people/?keywords=Ankush%20Sarsswat" target="_blank" rel="noopener">LinkedIn <span>Ankush Sarsswat</span></a></li>
+    <li><a href="https://instagram.com/ankush_sars23" target="_blank" rel="noopener">Instagram <span>@ankush_sars23</span></a></li>
+  </ul>
+  <p class="quote">Built, not borrowed.</p>
+</main>
+</body>
+</html>
